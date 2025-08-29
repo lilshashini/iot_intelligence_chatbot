@@ -36,7 +36,7 @@ This intelligent chatbot is designed to interpret natural language queries and p
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/iot_intelligence_chatbot.git
+git clone https://github.com/lilshashini/iot_intelligence_chatbot.git
 cd iot_intelligence_chatbot
 ```
 
