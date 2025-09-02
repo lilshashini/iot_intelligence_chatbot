@@ -2380,7 +2380,7 @@ if "db" not in st.session_state:
     try:
         db = init_database(
             user="shashini",
-            password="78e76q}D7£6[",
+            password="NiNs=LuP430&",
             host="q9gou7xoo6.ap-south-1.aws.clickhouse.cloud",
             port="9440",
             database="default"
