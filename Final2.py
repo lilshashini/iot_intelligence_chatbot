@@ -2404,20 +2404,18 @@ st.title("Althinect Intelligence Bot")
 # ✅ Auto-connect to ClickHouse at startup
 if "db" not in st.session_state:
     try:
-        db = clickhouse_connect.get_client(
-            host=CLICKHOUSE_HOST,
+        db = init_database(
             user=CLICKHOUSE_USER,
             password=CLICKHOUSE_PASSWORD,
-            database=CLICKHOUSE_DATABASE,
-            secure=True,
-            port=CLICKHOUSE_PORT
+            host=CLICKHOUSE_HOST,
+            port=CLICKHOUSE_PORT,  # use the variable
+            database=CLICKHOUSE_DATABASE
         )
         st.session_state.db = db
         logger.info("✅ ClickHouse connected automatically at startup")
     except Exception as e:
         st.error(f"❌ Auto connection failed: {str(e)}")
         logger.error(f"ClickHouse auto connection failed: {str(e)}")
-
 
 
 # Initialize session state
